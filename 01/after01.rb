@@ -14,11 +14,14 @@ def check_octal(i)
   i_octal == i_octal.reverse
 end
 
+num = 11
 
-array = (10..1000).to_a
-
-for i in array
-  if check_decimal(i) && check_binary(i) && check_octal(i)
-    p "これが答えだよ #{i}"
+while true
+  if check_decimal(num) && check_binary(num) && check_octal(num)
+    p "これが答えだよ #{num}"
+    break
   end
+  num +=2
 end
+
+
